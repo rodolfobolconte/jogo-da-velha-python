@@ -1,1 +1,2 @@
-Este branch tem como função criar a interface do jogo da velha, utilizando ferramentas do pygames. E terá como mentor Miqueas Galdino
+#Este branch tem como função criar a interface do jogo da velha, utilizando ferramentas do pygames.
+#E terá como Organizador Miqueas Galdino
