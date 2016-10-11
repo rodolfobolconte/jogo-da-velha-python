@@ -2,6 +2,19 @@ from random import choice
 
 jogo=[['','',''],['','',''],['','','']]
 
+def imprime():
+    print()
+    for i in range(3):
+        print('| ', end='')
+        for j in range(3):
+            print(jogo[i][j], end=' | ')
+
+        print('    | ', end='')
+        for k in range(3):
+            print('%i%i'%(i,k), end=' | ')
+
+        print()
+
 def vezdeX():
     jog=input('\nOnde jogar X? ')
 
