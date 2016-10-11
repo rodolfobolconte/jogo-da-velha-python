@@ -55,3 +55,17 @@ def compara(jog):
     return 0
 
 comeco='xo' ; comeco=choice(comeco)
+
+if comeco=='x':
+    for i in range(5):
+        imprime() ; vezdeX()
+        if compara('X') == 1:
+            break
+        imprime() ; vezdeO()
+        if compara('O')==1:
+            break
+        if i==4:
+            imprime() ; vezdeX()
+            if compara('X')==0:
+                print('Velha!!!')
+    imprime()
