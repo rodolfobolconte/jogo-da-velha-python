@@ -25,3 +25,5 @@ def vezdeO():
     while jogo[i][j]!=' ':
         jog=input('Jogada Não Permitida. Onde jogar O? ')
         i=int(jog[0]) ; j=int(jog[1])
+
+    jogo[i][j]='O'
