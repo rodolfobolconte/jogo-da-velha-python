@@ -27,3 +27,27 @@ def vezdeO():
         i=int(jog[0]) ; j=int(jog[1])
 
     jogo[i][j]='O'
+
+def compara(jog):
+    cont=0
+    #Compara horizontal
+    for i in range(3):
+        for j in range(3):
+            if jogo[i][j]==jog:
+                cont+=1
+        if cont==3: print('\n%c Ganhou!!!'%jog) ; cont=0 ; return 1
+        cont=0
+
+    #Compara vertical
+    for i in range(3):
+        for j in range(3):
+            if jogo[j][i]==jog:
+                cont+=1
+        if cont==3: print('\n%c Ganhou!!!'%jog) ; cont=0 ; return 1
+        cont=0
+
+    #Compara diagonal
+    if jogo[0][0]==jog and jogo[1][1]==jog and jogo[2][2]==jog: print('\n%c Ganhou!!!'%jog) ; return 1
+    elif jogo[2][0]==jog and jogo[1][1]==jog and jogo[0][2]==jog: print('\n%c Ganhou!!!'%jog) ; return 1
+
+    return 0
