@@ -70,28 +70,28 @@ def compara(jog):
 comeco='xo' ; comeco=choice(comeco)
 
 if comeco=='x':
-    for i in range(5):
+    for i in range(4):
         imprime() ; vezdeX()
         if compara('X') == 1:
             break
         imprime() ; vezdeO()
         if compara('O')==1:
             break
-        if i==4:
+        if i==3:
             imprime() ; vezdeX()
             if compara('X')==0:
                 print('Velha!!!')
     imprime()
 
 else:
-    for i in range(5):
+    for i in range(4):
         imprime() ; vezdeO()
         if compara('O')==1:
             break
         imprime() ; vezdeX()
         if compara('X')==1:
             break
-        if i==4:
+        if i==3:
             imprime() ; vezdeX()
             if compara('O')==0:
                 print('Velha!!!')
