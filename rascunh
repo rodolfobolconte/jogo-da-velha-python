@@ -1,24 +1,55 @@
-def inteligenciaJoga ():
+from random import randint
+
+
+def inteligenciaJoga (marcaPlayer,marcaPC):
     cont=0
-    #Compara diagonal
-	if jogo[0][0]==x && jogo[1][1]==x:
-		jogo[2][2] = O
+    
+    if ((jogo[0][1]==marcaPlayer and jogo[2][1]==marcaPlayer) or
+        (jogo[1][0]==marcaPlayer and jogo[1][2]==marcaPlayer) or
+        (jogo[0][0]==marcaPlayer and jogo[2][2]==marcaPlayer) or
+        (jogo[2][0]==marcaPlayer and jogo[0][2]==marcaPlayer)):
+            jogo[1][1] = marcaPC
+  
+    elif ((jogo[0][0]==marcaPlayer and jogo[0][1]==marcaPlayer) or
+        (jogo[2][0]==marcaPlayer and jogo[1][1]==marcaPlayer) or
+        (jogo[1][2]==marcaPlayer and jogo[2][2]==marcaPlayer)):
+            jogo[0][2] = marcaPC
 
-	if jogo[0][0]==x and jogo[2][2]==x or jogo[0][2]==x and jogo[2][0]:	
-		jogo[1][1]==O
+    elif ((jogo[0][1]==marcaPlayer and jogo[0][2]==marcaPlayer) or
+        (jogo[2][0]==marcaPlayer and jogo[1][0]==marcaPlayer) or
+        (jogo[1][2]==marcaPlayer and jogo[1][1]==marcaPlayer)):
+            jogo[0][0] = marcaPC
+   
+    elif ((jogo[0][0]==marcaPlayer and jogo[1][0]==marcaPlayer) or
+        (jogo[2][1]==marcaPlayer and jogo[2][2]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[0][2]==marcaPlayer)):
+            jogo[2][0] = marcaPC
 
-	if jogo[1][1]==x && jogo[2][2]==x:
-		jogo[0][0]==O
+    elif ((jogo[0][2]==marcaPlayer and jogo[1][2]==marcaPlayer) or
+        (jogo[2][1]==marcaPlayer and jogo[2][0]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[0][0]==marcaPlayer)):
+            jogo[2][2] = marcaPC
 
-    #Compara vertical
-	if jogo[0][0]==x && jogo[2][0]==x:
-		jogo[1][0]==O	
-	if jogo[0][1]==x and jogo[2][1]==x:
-		jogo[1][1]==O	
-	if jogo[0][2]==x && jogo[2][2]==x:
-		jogo[1][2]==O	
-    #Compara diagonal
-    if jogo[0][0]==jog and jogo[1][1]==jog and jogo[2][2]==jog: print('\n%c Ganhou!!!'%jog) ; return 1
-    elif jogo[2][0]==jog and jogo[1][1]==jog and jogo[0][2]==jog: print('\n%c Ganhou!!!'%jog) ; return 1
+    elif ((jogo[0][2]==marcaPlayer and jogo[2][2]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[1][0]==marcaPlayer)):
+            jogo[1][2] = marcaPC
 
-    return 0
+    elif ((jogo[0][1]==marcaPlayer and jogo[1][1]==marcaPlayer) or
+        (jogo[2][0]==marcaPlayer and jogo[2][2]==marcaPlayer)):
+            jogo[2][1] = marcaPC
+
+    elif ((jogo[0][0]==marcaPlayer and jogo[0][2]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[2][1]==marcaPlayer)):
+            jogo[0][1] = marcaPC
+
+    elif ((jogo[0][0]==marcaPlayer and jogo[2][0]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[1][2]==marcaPlayer)):
+            jogo[1][0] = marcaPC
+
+    else:
+        while jogo[(randint(0,2))][(randint(0,2))] == ' ':
+            jogo[(randint(0,2))][(randint(0,2))]
+        jogo[(randint(0,2))][(randint(0,2))] = maraPC
+            
+        
+  return 0
