@@ -1,0 +1,7 @@
+import pygame
+import os,sys
+from pygame.constants import *
+
+tela = pygame.display.set_mode ((300,200))
+
+tela.fill ((255,255,255))
