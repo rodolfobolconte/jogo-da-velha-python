@@ -4,52 +4,54 @@ from random import randint
 def inteligenciaJoga (marcaPlayer,marcaPC):
     cont=0
     
-    if ((jogo[0][1]==marcaPlayer and jogo[2][1]==marcaPlayer) or
+    if (((jogo[0][1]==marcaPlayer and jogo[2][1]==marcaPlayer) or
         (jogo[1][0]==marcaPlayer and jogo[1][2]==marcaPlayer) or
         (jogo[0][0]==marcaPlayer and jogo[2][2]==marcaPlayer) or
-        (jogo[2][0]==marcaPlayer and jogo[0][2]==marcaPlayer)):
+        (jogo[2][0]==marcaPlayer and jogo[0][2]==marcaPlayer)) and (jogo[1][1] == " ")):
             jogo[1][1] = marcaPC
   
-    elif ((jogo[0][0]==marcaPlayer and jogo[0][1]==marcaPlayer) or
+    elif (((jogo[0][0]==marcaPlayer and jogo[0][1]==marcaPlayer) or
         (jogo[2][0]==marcaPlayer and jogo[1][1]==marcaPlayer) or
-        (jogo[1][2]==marcaPlayer and jogo[2][2]==marcaPlayer)):
+        (jogo[1][2]==marcaPlayer and jogo[2][2]==marcaPlayer))and (jogo[0][2] == " ")):
             jogo[0][2] = marcaPC
 
-    elif ((jogo[0][1]==marcaPlayer and jogo[0][2]==marcaPlayer) or
+    elif (((jogo[0][1]==marcaPlayer and jogo[0][2]==marcaPlayer) or
         (jogo[2][0]==marcaPlayer and jogo[1][0]==marcaPlayer) or
-        (jogo[1][2]==marcaPlayer and jogo[1][1]==marcaPlayer)):
+        (jogo[1][2]==marcaPlayer and jogo[1][1]==marcaPlayer)) and (jogo[0][0] == " ")):
             jogo[0][0] = marcaPC
    
-    elif ((jogo[0][0]==marcaPlayer and jogo[1][0]==marcaPlayer) or
+    elif (((jogo[0][0]==marcaPlayer and jogo[1][0]==marcaPlayer) or
         (jogo[2][1]==marcaPlayer and jogo[2][2]==marcaPlayer) or
-        (jogo[1][1]==marcaPlayer and jogo[0][2]==marcaPlayer)):
+        (jogo[1][1]==marcaPlayer and jogo[0][2]==marcaPlayer)) and (jogo[2][0] = " ")):
             jogo[2][0] = marcaPC
 
-    elif ((jogo[0][2]==marcaPlayer and jogo[1][2]==marcaPlayer) or
+    elif (((jogo[0][2]==marcaPlayer and jogo[1][2]==marcaPlayer) or
         (jogo[2][1]==marcaPlayer and jogo[2][0]==marcaPlayer) or
-        (jogo[1][1]==marcaPlayer and jogo[0][0]==marcaPlayer)):
+        (jogo[1][1]==marcaPlayer and jogo[0][0]==marcaPlayer)) and (jogo[2][2] == " ")):
             jogo[2][2] = marcaPC
 
-    elif ((jogo[0][2]==marcaPlayer and jogo[2][2]==marcaPlayer) or
-        (jogo[1][1]==marcaPlayer and jogo[1][0]==marcaPlayer)):
+    elif (((jogo[0][2]==marcaPlayer and jogo[2][2]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[1][0]==marcaPlayer)) and (jogo[1][2] == " ")):
             jogo[1][2] = marcaPC
 
-    elif ((jogo[0][1]==marcaPlayer and jogo[1][1]==marcaPlayer) or
-        (jogo[2][0]==marcaPlayer and jogo[2][2]==marcaPlayer)):
+    elif (((jogo[0][1]==marcaPlayer and jogo[1][1]==marcaPlayer) or
+        (jogo[2][0]==marcaPlayer and jogo[2][2]==marcaPlayer)) and (jogo[2][1] == " ")):
             jogo[2][1] = marcaPC
 
-    elif ((jogo[0][0]==marcaPlayer and jogo[0][2]==marcaPlayer) or
-        (jogo[1][1]==marcaPlayer and jogo[2][1]==marcaPlayer)):
+    elif (((jogo[0][0]==marcaPlayer and jogo[0][2]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[2][1]==marcaPlayer)) and (jogo[0][1] == " ")):
             jogo[0][1] = marcaPC
 
-    elif ((jogo[0][0]==marcaPlayer and jogo[2][0]==marcaPlayer) or
-        (jogo[1][1]==marcaPlayer and jogo[1][2]==marcaPlayer)):
+    elif (((jogo[0][0]==marcaPlayer and jogo[2][0]==marcaPlayer) or
+        (jogo[1][1]==marcaPlayer and jogo[1][2]==marcaPlayer)) and (jogo[1][0] == " ")):
             jogo[1][0] = marcaPC
+        else:
+            preencheAleatorio()
 
     else:
         while jogo[(randint(0,2))][(randint(0,2))] == ' ':
             jogo[(randint(0,2))][(randint(0,2))]
-        jogo[(randint(0,2))][(randint(0,2))] = maraPC
+        jogo[(randint(0,2))][(randint(0,2))] = marcaPC
             
         
-  return 0
+	return 0
