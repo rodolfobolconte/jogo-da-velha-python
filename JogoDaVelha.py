@@ -92,7 +92,7 @@ else:
         if compara('X')==1:
             break
         if i==3:
-            imprime() ; vezdeX()
+            imprime() ; vezdeO()
             if compara('O')==0:
                 print('Velha!!!')
     imprime()
