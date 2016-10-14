@@ -80,8 +80,8 @@ if comeco=='x':
         if i==3:
             imprime() ; vezdeX()
             if compara('X')==0:
-                print('Velha!!!')
-    imprime()
+            	imprime()
+            	print('\nVelha!!!')
 
 else:
     for i in range(4):
@@ -92,7 +92,7 @@ else:
         if compara('X')==1:
             break
         if i==3:
-            imprime() ; vezdeX()
+            imprime() ; vezdeO()
             if compara('O')==0:
-                print('Velha!!!')
-    imprime()
+            	imprime()
+            	print('\nVelha!!!')
