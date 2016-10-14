@@ -1,6 +1,6 @@
 from random import choice
 
-jogo=[['','',''],['','',''],['','','']]
+jogo=[[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
 def imprime():
     print()
@@ -96,4 +96,3 @@ else:
             if compara('O')==0:
                 print('Velha!!!')
     imprime()
-
