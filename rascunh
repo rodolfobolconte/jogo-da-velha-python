@@ -1,3 +1,5 @@
+from random import randint
+
 def IA(marcaPlayer, marcaPC):
     cont = 0
     print("\nComputador jogou em:")
