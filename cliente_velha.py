@@ -4,7 +4,7 @@
 #Primeira função para utilizar o socket que nesse caso é cliente jogo da velha
 import socket
 ip_maquina=input("Digite o endereço ip da maquina")
-PORT = 5000            # Porta que o Servidor esta
+PORT = 5000            # Porta que sera utilizada para acessar o servidor, pode ser alterada para outro valor
 cliente_velha = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 dest = (HOST, PORT)
 print ("Para sair use CTRL+X\n")
