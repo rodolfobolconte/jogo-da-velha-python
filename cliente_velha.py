@@ -7,10 +7,9 @@ ip_servidor=input("Digite o endereço ip da maquina servidor, se for uma conexã
 porta_de_conexao=49250        # Porta que sera utilizada para acessar o servidor, pode ser alterada para outro valor
 servidor_velha=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 servidor_velha.connect((ip_servidor,porta_de_conexao))
-jogada= #Essa variavel vai receber o local onde foi feito a jogada, então que que a cada jogada essa variavel receber a nova jogada
+data=input("Digite um valor") #Essa variavel vai receber o local onde foi feito a jogada, então que que a cada jogada essa variavel receber a nova jogada
 for line in jogada:
     servidor_velha.send(jogada) #isso é pra enviar a jogada para o servidor.
     data=servidor_velha.recv(1024) # recebe o retorno da mensagem, que nesse caso é bom configurar para ser a jogada da outra maquina
     print "A jogada do outro jogador foi na :",repr(data)
 servidor_velha.close()
-
