@@ -1,0 +1,16 @@
+import pygame
+from pygame.locals import*
+pygame.init()
+tela =pygame.display.set_mode((24,24))
+Clock = pygame.time.Clock()
+continuar = True
+
+while (continuar):
+    clock.tick(60)
+    for event in pygame.event.get():
+        pygame.draw.circle((tela, (200,200,200)), (posX,posY), 16)
+        if event.type == QUIT:
+            continuar = False
+    tela.fill ((255, 255, 255))
+    pygame.display.flip()
+          
