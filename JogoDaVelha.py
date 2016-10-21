@@ -1,4 +1,5 @@
-﻿from random import choice
+﻿from random import randint
+from random import choice
 
 jogo=[[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 
@@ -66,8 +67,6 @@ def compara(jog):
     elif jogo[2][0]==jog and jogo[1][1]==jog and jogo[0][2]==jog: print('\n%c Ganhou!!!'%jog) ; return 1
 
     return 0
-
-from random import randint
 
 def IA(marcaPlayer, marcaPC):
     cont = 0
