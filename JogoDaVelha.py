@@ -1,4 +1,4 @@
-from random import choice
+﻿from random import choice
 
 jogo=[['','',''],['','',''],['','','']]
 
@@ -167,34 +167,3 @@ def IA(marcaPlayer, marcaPC):
             jogo[l][c]=marcaPC
 
     return 0
-
-comeco='xo' ; comeco=choice(comeco)
-
-if comeco=='x':
-    for i in range(5):
-        imprime() ; vezdeX()
-        if compara('X') == 1:
-            break
-        imprime() ; vezdeO()
-        if compara('O')==1:
-            break
-        if i==4:
-            imprime() ; vezdeX()
-            if compara('X')==0:
-                print('Velha!!!')
-    imprime()
-
-else:
-    for i in range(5):
-        imprime() ; vezdeO()
-        if compara('O')==1:
-            break
-        imprime() ; vezdeX()
-        if compara('X')==1:
-            break
-        if i==4:
-            imprime() ; vezdeX()
-            if compara('O')==0:
-                print('Velha!!!')
-    imprime()
-
