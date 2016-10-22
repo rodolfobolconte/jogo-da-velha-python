@@ -268,3 +268,22 @@ if modo == 1:
     else:
         print('\nResultado: Empate!!!')
         print('Placar: %i a %i' % (placar[0], placar[1]))
+
+elif modo == 2:
+    cont='s'
+    while cont=='s':
+        comecoxIA = 'pi'; comecoxIA = choice(comecoxIA)
+        xIA(comecoxIA)
+        print('\nPlacar: Jogador = %i | Computador = %i' % (placar[0], placar[1]))
+        cont = input("\nDeseja jogar uma nova partida? (s ou n) ")
+        limpaJogo()
+
+    if placar[0] > placar[1]:
+        print('\nResultado: Jogador Ganhou!!!')
+        print('Placar: %i a %i' % (placar[0], placar[1]))
+    elif placar[0] < placar[1]:
+        print('\nResultado: Computador Ganhou!!!')
+        print('Placar: %i a %i' % (placar[1], placar[0]))
+    else:
+        print('\nResultado: Empate!!!')
+        print('Placar: %i a %i' % (placar[0], placar[1]))
