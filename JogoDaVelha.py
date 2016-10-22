@@ -1,4 +1,4 @@
-﻿from random import randint
+from random import randint
 from random import choice
 
 jogo=[[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
@@ -252,7 +252,11 @@ def xIA(comeco):
                 else:
                     placar[1] += 1
 
-modo = int(input("Escolha o modo de jogo:\n\n1- Offline vs 1 Jogador\n2- Offline vs Computador\n3- Online vs 1 Jogador\n\nOpção: "))
+modo = int(input("Escolha o modo de jogo:\n\n1- Offline vs 1 Jogador\n2- Offline vs Computador\n\nOpção: "))
+
+while modo!=1 and modo!=2:
+	print("\nModo Inválido")
+	modo = int(input("Escolha o modo de jogo:\n\n1- Offline vs 1 Jogador\n2- Offline vs Computador\n\nOpção: "))
 
 if modo == 1:
     cont='s'
