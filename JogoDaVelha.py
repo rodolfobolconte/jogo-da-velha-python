@@ -2,6 +2,7 @@
 from random import choice
 
 jogo=[[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
+placar = [0,0]
 
 def imprime():
     print()
@@ -166,3 +167,46 @@ def IA(marcaPlayer, marcaPC):
             jogo[l][c]=marcaPC
 
     return 0
+
+def x1(comeco):
+    if comeco == 'x':
+        for i in range(4):
+            imprime();
+            vezdeX()
+            if compara('X') == 1:
+                placar[0]+=1
+                break
+            imprime();
+            vezdeO()
+            if compara('O') == 1:
+                placar[1] += 1
+                break
+            if i == 3:
+                imprime();
+                vezdeX()
+                if compara('X') == 0:
+                    imprime()
+                    print('\nVelha!!!')
+                else:
+                    placar[0] += 1
+
+    else:
+        for i in range(4):
+            imprime();
+            vezdeO()
+            if compara('O') == 1:
+                placar[1] += 1
+                break
+            imprime();
+            vezdeX()
+            if compara('X') == 1:
+                placar[0] += 1
+                break
+            if i == 3:
+                imprime();
+                vezdeO()
+                if compara('O') == 0:
+                    imprime()
+                    print('\nVelha!!!')
+                else:
+                    placar[1] += 1
