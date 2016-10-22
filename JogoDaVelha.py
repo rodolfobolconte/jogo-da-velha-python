@@ -210,3 +210,39 @@ def x1(comeco):
                     print('\nVelha!!!')
                 else:
                     placar[1] += 1
+
+def xIA(comeco):
+    if comeco=='p':
+        for i in range(4):
+            imprime() ; vezdeX()
+            if compara('X') == 1:
+                placar[0] += 1
+                break
+            imprime() ; IA('X', 'O')
+            if compara('O') == 1:
+                placar[1] += 1
+                break
+            if i == 3:
+                imprime() ; vezdeX()
+                if compara('X') == 0:
+                    imprime()
+                    print('\nVelha!!!')
+                else:
+                    placar[0] += 1
+    else:
+        for i in range(4):
+            imprime() ; IA('X','O')
+            if compara('O') == 1:
+                placar[1] += 1
+                break
+            imprime() ; vezdeX()
+            if compara('X') == 1:
+                placar[1] += 1
+                break
+            if i == 3:
+                imprime() ; IA('X','O')
+                if compara('O') == 0:
+                    imprime()
+                    print('\nVelha!!!')
+                else:
+                    placar[1] += 1
