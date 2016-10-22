@@ -246,3 +246,25 @@ def xIA(comeco):
                     print('\nVelha!!!')
                 else:
                     placar[1] += 1
+
+modo = int(input("Escolha o modo de jogo:\n\n1- Offline vs 1 Jogador\n2- Offline vs Computador\n3- Online vs 1 Jogador\n\nOpção: "))
+
+if modo == 1:
+    cont='s'
+    while cont=='s':
+        print("\nDefinam quem será X e O e comecem a jogar!!!")
+        comecox1 = 'xo'; comecox1 = choice(comecox1)
+        x1(comecox1)
+        print('\nPlacar: X = %i | O = %i'%(placar[0],placar[1]))
+        cont=input("\nDeseja jogar uma nova partida? (s ou n) ")
+        limpaJogo()
+
+    if placar[0]>placar[1]:
+        print('\nResultado: Jogador X Ganhou!!!')
+        print('Placar: %i a %i' % (placar[0], placar[1]))
+    elif placar[0]<placar[1]:
+        print('\nResultado: Jogador O Ganhou!!!')
+        print('Placar: %i a %i' % (placar[1], placar[0]))
+    else:
+        print('\nResultado: Empate!!!')
+        print('Placar: %i a %i' % (placar[0], placar[1]))
