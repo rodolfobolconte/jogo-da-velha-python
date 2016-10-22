@@ -4,6 +4,11 @@ from random import choice
 jogo=[[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 placar = [0,0]
 
+def limpaJogo():
+    for i in range(3):
+        for j in range(3):
+            jogo[i][j]=' '
+
 def imprime():
     print()
     for i in range(3):
