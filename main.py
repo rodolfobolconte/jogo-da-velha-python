@@ -1,4 +1,5 @@
 import os
+from vsJogador import *
 
 
 jogoPrincipal = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
@@ -78,7 +79,7 @@ def comparaVencedor(simbolo):
 
     return False
 
-while iniciaJogo():
+"""while iniciaJogo():
     situacao = False
 
     for simbolo in ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']:
@@ -91,4 +92,12 @@ while iniciaJogo():
     if not situacao:
         finalizaJogo(False)
 
-    input()
+    input()"""
+
+cabecalho()
+
+modoDeJogo = int(input('\nEscolha o método de jogo (1- vsJogador | 2- vsComputador): '))
+
+if modoDeJogo == 1:
+    novoJogo = vsJogador()
+    novoJogo.execucaoJogoPrincipal()

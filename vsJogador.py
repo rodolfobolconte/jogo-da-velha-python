@@ -64,15 +64,15 @@ class vsJogador():
     def comparaVencedor(self, simbolo):
         #compara linhas
         if (self.jogoPrincipal[0][0] == self.jogoPrincipal[0][1] == self.jogoPrincipal[0][2] == simbolo) or (self.jogoPrincipal[1][0] == self.jogoPrincipal[1][1] == self.jogoPrincipal[1][2] == simbolo) or (self.jogoPrincipal[2][0] == self.jogoPrincipal[2][1] == self.jogoPrincipal[2][2] == simbolo):
-            finalizaJogo(simbolo)
+            self.finalizaJogo(simbolo)
             return True
         #compara colunas
         elif (self.jogoPrincipal[0][0] == self.jogoPrincipal[1][0] == self.jogoPrincipal[2][0] == simbolo) or (self.jogoPrincipal[0][1] == self.jogoPrincipal[1][1] == self.jogoPrincipal[2][1] == simbolo) or (self.jogoPrincipal[0][2] == self.jogoPrincipal[1][2] == self.jogoPrincipal[2][2] == simbolo):
-            finalizaJogo(simbolo)
+            self.finalizaJogo(simbolo)
             return True
         #compara diagonais
         elif (self.jogoPrincipal[0][0] == self.jogoPrincipal[1][1] == self.jogoPrincipal[2][2] == simbolo) or (self.jogoPrincipal[2][0] == self.jogoPrincipal[1][1] == self.jogoPrincipal[0][2] == simbolo):
-            finalizaJogo(simbolo)
+            self.finalizaJogo(simbolo)
             return True
 
         return False
