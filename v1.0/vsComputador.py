@@ -1,6 +1,6 @@
 import os
 
-class vsJogador():
+class vsComputador():
     def __init__(self):
 
         self.placar = {'X':0, 'O':0}
