@@ -1,4 +1,5 @@
 import os
+import random
 
 class Jogador:
     def __init__(self):
@@ -99,6 +100,9 @@ class Jogador:
             self.computaVencedor('Velha')
         else:
             self.computaVencedor(vezJogador)
+
+    def jogadaComputador(self):
+        if self.tabuleiro
 
 
 modoDeJogo = input('Escolha o Modo de Jogo (1- vsJogador | 2- vsComputador | s- Sair): ')
